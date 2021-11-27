@@ -61,6 +61,7 @@ class 기지국설치 {
         int answer  = 0;
         int si = 0;
         int position = 1;
+        int range = (w * 2) + 1;
 
         while(position <= n){
             if (si < stations.length && stations[si] - w <= position){
@@ -68,7 +69,7 @@ class 기지국설치 {
                 si += 1;
             }else{
                 answer += 1;
-                position += (w * 2) + 1;
+                position += range;
             }
         }
 
